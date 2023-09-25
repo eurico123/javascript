@@ -17,6 +17,7 @@
             width: 200px;
             height: 200px;
             border-radius: 8px;
+            cursor: pointer;
         }
 
         div#area:hover {
@@ -26,14 +27,24 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()">
+    <div id="area">
         Interaja..
     </div>
 
     <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+
         function clicar(){
-            var a = window.document.getElementById('area')
             a.innerText = 'Clicou..'
+        }
+        function entrou(){
+            a.innerText = 'Entrou..'
+        }
+        function saiu(){
+            a.innerText = 'Saiu..'
         }
     </script>
 </body>
