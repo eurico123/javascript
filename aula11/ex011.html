@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é Brasileiro?</title>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro</h1>
+    <label for="ipais">País: </label>
+    <input type="text" name="pais" id="ipais" placeholder="digite seu país" required>
+    <input type="button" value="Verificar" onclick="analisar()">
+    <div id="resul">
+        Resultado...
+    </div>
+
+    <script>
+        function analisar(){
+            var paises = window.document.getElementById('ipais')
+            var res = window.document.getElementById('resul')
+            var pais = (paises.value)
+            if (pais != 'Brasil'){
+                res.innerText = 'Estrangeiro'
+            } else {
+                res.innerText = 'Brasileiro'
+            }
+        }
+    </script>
+</body>
+</html>
