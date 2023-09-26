@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detran</title>
 </head>
 <body>
-    
+    <h1>Sistema de Multas</h1>
+    <label for="ivel">Velocidade: </label>
+    <input type="number" name="vel" id="ivel" required>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+        Resultado...
+    </div>
+
+    <script>
+        function calcular(){
+            var ivel = window.document.getElementById('ivel')
+            var res = window.document.getElementById('res')
+            var velo = Number(ivel.value)
+
+            if (velo > 60){
+                res.innerHTML = 'Você utrapassou o limite de 60km/h, <strong>MULTADO!</strong>'
+            } else {
+                res.innerHTML = 'Você está dentro do limite permitido!'
+            }
+        }
+    </script>
 </body>
 </html>
