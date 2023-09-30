@@ -1,8 +1,8 @@
-var c = 1
+var c = 5
 do {
     console.log('Passo ' + c)
-    c++
-} while (c <= 6)
+    c = c + 2
+} while (c <= 12)
 
 
 
